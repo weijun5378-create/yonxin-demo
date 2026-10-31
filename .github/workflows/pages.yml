@@ -25,7 +25,7 @@ jobs:
       - run: npm ci
       - uses: actions/configure-pages@v5
         id: pages
-      - run: npm run build
+      - run: node scripts/assemble-catalog.mjs && npx vite build
         env:
           GITHUB_PAGES_BASE: ${{ steps.pages.outputs.base_path }}/
       - uses: actions/upload-pages-artifact@v4
@@ -33,3 +33,4 @@ jobs:
           path: dist/client
       - uses: actions/deploy-pages@v4
         id: deployment
+
