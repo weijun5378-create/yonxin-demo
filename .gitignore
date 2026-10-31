@@ -1,0 +1,7 @@
+node_modules/
+dist/
+qa/
+.DS_Store
+.env*
+.openai/
+public/assets/yongxin-catalog-2026.pdf
